@@ -49,7 +49,7 @@ Pliki nag³ówkowe wymagane do rozwoju programów wykorzystuj±cych
 gsmlib.
 
 %package static
-Summary:	Static gmslib library.
+Summary:	Static gmslib library
 Summary(pl):	Statyczna biblioteka gsmlib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
