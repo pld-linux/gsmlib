@@ -12,7 +12,7 @@ URL:		http://www.pxh.de/fs/gsmlib/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool >= 2:1.4d
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This distribution contains a library to access GSM mobile phones
