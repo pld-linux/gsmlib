@@ -66,6 +66,8 @@ Statyczna biblioteka gsmlib.
 %setup -q
 
 %build
+aclocal
+autoconf
 %configure \
 	--enable-nls
 %{__make}
