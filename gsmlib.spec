@@ -1,7 +1,7 @@
 Summary:	Library to access GSM mobile phones through GSM modems
 Summary(pl):	Bibliteka dostêpu do telefonów GSM poprzez modem GSM
 Name:		gsmlib
-Version:	1.5
+Version:	1.9
 Release:	1
 License:	LGPL
 Vendor:		Peter Hofmann <software@pxh.de>
@@ -64,9 +64,9 @@ Statyczna biblioteka gsmlib.
 %setup -q
 
 %build
-aclocal
-autoconf
-%configure \
+#aclocal
+#autoconf
+%configure2_13 \
 	--enable-nls
 %{__make}
 
