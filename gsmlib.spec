@@ -78,8 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name}
 
-gzip -9nf doc/FAQ NEWS README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -94,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz doc/*.gz
+%doc doc/FAQ NEWS README TODO
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/%{name}
