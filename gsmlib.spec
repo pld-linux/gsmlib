@@ -1,7 +1,7 @@
 Summary:	Library to access GSM mobile phones through GSM modems
 Summary(pl):	Biblioteka dostêpu do telefonów GSM poprzez modem GSM
 Name:		gsmlib
-Version:	1.9
+Version:	1.10
 Release:	1
 License:	LGPL
 Vendor:		Peter Hofmann <software@pxh.de>
@@ -10,6 +10,7 @@ Source0:	http://www.pxh.de/fs/gsmlib/download/%{name}-%{version}.tar.gz
 URL:		http://www.pxh.de/fs/gsmlib/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool >= 2:1.4d
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -64,9 +65,13 @@ Statyczna biblioteka gsmlib.
 %setup -q
 
 %build
-#aclocal
-#autoconf
-%configure2_13 \
+# supplied libtool is broken (C++ library linking)
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+%configure \
 	--enable-nls
 %{__make}
 
@@ -86,13 +91,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
+%doc doc/FAQ NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %{_mandir}/man*/*
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/FAQ NEWS README TODO
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/%{name}
