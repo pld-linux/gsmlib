@@ -44,7 +44,7 @@ Requires:	%{name} = %{version}
 The gsmlib-devel package includes the header files necessary for
 developing programs which use the gsmlib library.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe wymagane do rozwoju programów wykorzystuj±cych
 gsmlib.
 
@@ -57,7 +57,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static gmslib library.
 
-%description -l pl static
+%description static -l pl
 Statyczna biblioteka gsmlib.
 
 %prep
