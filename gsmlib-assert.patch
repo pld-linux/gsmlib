@@ -1,0 +1,194 @@
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_at.cc gsmlib-1.10/gsmlib/gsm_at.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_at.cc	2002-09-21 13:21:09.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_at.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -21,6 +21,7 @@
+ #include <gsmlib/gsm_me_ta.h>
+ #include <ctype.h>
+ #include <strstream>
++#include <cassert>
+ 
+ using namespace std;
+ using namespace gsmlib;
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_map_key.h gsmlib-1.10/gsmlib/gsm_map_key.h
+--- gsmlib-1.10.orig/gsmlib/gsm_map_key.h	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_map_key.h	2004-07-01 00:15:18.000000000 +0200
+@@ -15,6 +15,7 @@
+ #define GSM_MAP_KEY_H
+ 
+ #include <gsmlib/gsm_sms_codec.h>
++#include <cassert>
+ 
+ namespace gsmlib
+ {
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_me_ta.cc gsmlib-1.10/gsmlib/gsm_me_ta.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_me_ta.cc	2002-10-22 22:48:39.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_me_ta.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -18,6 +18,7 @@
+ #include <gsmlib/gsm_me_ta.h>
+ #include <gsmlib/gsm_parser.h>
+ #include <gsmlib/gsm_sysdep.h>
++#include <cassert>
+ 
+ using namespace std;
+ using namespace gsmlib;
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_parser.cc gsmlib-1.10/gsmlib/gsm_parser.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_parser.cc	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_parser.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -16,7 +16,7 @@
+ #include <gsmlib/gsm_parser.h>
+ #include <gsmlib/gsm_nls.h>
+ #include <ctype.h>
+-#include <assert.h>
++#include <cassert>
+ #include <strstream>
+ 
+ using namespace std;
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_phonebook.cc gsmlib-1.10/gsmlib/gsm_phonebook.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_phonebook.cc	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_phonebook.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -20,7 +20,7 @@
+ #include <gsmlib/gsm_me_ta.h>
+ #include <strstream>
+ #include <iostream>
+-#include <assert.h>
++#include <cassert>
+ #include <ctype.h>
+ 
+ using namespace std;
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_sms.cc gsmlib-1.10/gsmlib/gsm_sms.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_sms.cc	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_sms.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -22,6 +22,7 @@
+ #include <gsmlib/gsm_me_ta.h>
+ #include <strstream>
+ #include <string>
++#include <cassert>
+ 
+ using namespace std;
+ using namespace gsmlib;
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_sms.h gsmlib-1.10/gsmlib/gsm_sms.h
+--- gsmlib-1.10.orig/gsmlib/gsm_sms.h	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_sms.h	2004-07-01 00:15:18.000000000 +0200
+@@ -20,6 +20,7 @@
+ #include <gsmlib/gsm_at.h>
+ #include <string>
+ #include <vector>
++#include <cassert>
+ 
+ using namespace std;
+ 
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_sms_codec.cc gsmlib-1.10/gsmlib/gsm_sms_codec.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_sms_codec.cc	2002-09-23 00:09:16.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_sms_codec.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -24,6 +24,7 @@
+ #include <string.h>
+ #endif
+ #include <string>
++#include <cassert>
+ using namespace std;
+ using namespace gsmlib;
+ 
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_sms_codec.h gsmlib-1.10/gsmlib/gsm_sms_codec.h
+--- gsmlib-1.10.orig/gsmlib/gsm_sms_codec.h	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_sms_codec.h	2004-07-01 00:15:18.000000000 +0200
+@@ -14,7 +14,7 @@
+ #define GSM_SMS_CODEC_H
+ 
+ #include <string>
+-#include <assert.h>
++#include <cassert>
+ 
+ using namespace std;
+ 
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_sms_store.cc gsmlib-1.10/gsmlib/gsm_sms_store.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_sms_store.cc	2002-10-15 00:42:19.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_sms_store.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -18,6 +18,7 @@
+ #include <gsmlib/gsm_parser.h>
+ #include <gsmlib/gsm_me_ta.h>
+ #include <iostream>
++#include <cassert>
+ 
+ using namespace std;
+ using namespace gsmlib;
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_sorted_phonebook.cc gsmlib-1.10/gsmlib/gsm_sorted_phonebook.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_sorted_phonebook.cc	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_sorted_phonebook.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -20,6 +20,7 @@
+ #include <iostream>
+ #include <fstream>
+ #include <limits.h>
++#include <cassert>
+ 
+ const int MAX_LINE_SIZE = 1000;
+ 
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_sorted_phonebook_base.cc gsmlib-1.10/gsmlib/gsm_sorted_phonebook_base.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_sorted_phonebook_base.cc	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_sorted_phonebook_base.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -21,7 +21,7 @@
+ #include <gsmlib/gsm_util.h>
+ #include <gsmlib/gsm_nls.h>
+ 
+-#include <assert.h>
++#include <cassert>
+ 
+ using namespace std;
+ using namespace gsmlib;
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_sorted_sms_store.cc gsmlib-1.10/gsmlib/gsm_sorted_sms_store.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_sorted_sms_store.cc	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_sorted_sms_store.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -21,6 +21,7 @@
+ #ifdef HAVE_NETINET_IN_H
+ #include <netinet/in.h>
+ #endif
++#include <cassert>
+ 
+ using namespace std;
+ using namespace gsmlib;
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_sorted_sms_store.h gsmlib-1.10/gsmlib/gsm_sorted_sms_store.h
+--- gsmlib-1.10.orig/gsmlib/gsm_sorted_sms_store.h	2002-05-14 21:38:12.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_sorted_sms_store.h	2004-07-01 00:15:18.000000000 +0200
+@@ -18,7 +18,7 @@
+ #include <gsmlib/gsm_map_key.h>
+ #include <string>
+ #include <map>
+-#include <assert.h>
++#include <cassert>
+ 
+ using namespace std;
+ 
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_unix_serial.cc gsmlib-1.10/gsmlib/gsm_unix_serial.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_unix_serial.cc	2002-09-22 13:51:10.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_unix_serial.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -20,6 +20,7 @@
+ #include <fcntl.h>
+ #include <iostream>
+ #include <strstream>
++#include <cassert>
+ #include <errno.h>
+ #include <stdio.h>
+ #include <unistd.h>
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_util.cc gsmlib-1.10/gsmlib/gsm_util.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_util.cc	2002-09-22 15:41:08.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_util.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -17,7 +17,7 @@
+ #include <gsmlib/gsm_util.h>
+ #include <gsmlib/gsm_sysdep.h>
+ #include <sys/stat.h>
+-#include <assert.h>
++#include <cassert>
+ #include <string.h>
+ #include <iostream>
+ #include <strstream>
+diff -Nur gsmlib-1.10.orig/gsmlib/gsm_win32_serial.cc gsmlib-1.10/gsmlib/gsm_win32_serial.cc
+--- gsmlib-1.10.orig/gsmlib/gsm_win32_serial.cc	2002-09-22 13:51:10.000000000 +0200
++++ gsmlib-1.10/gsmlib/gsm_win32_serial.cc	2004-07-01 00:15:18.000000000 +0200
+@@ -22,7 +22,7 @@
+ #include <strstream>
+ #include <errno.h>
+ #include <stdio.h>
+-#include <assert.h>
++#include <cassert>
+ #include <signal.h>
+ 
+ using namespace std;
