@@ -7,6 +7,7 @@ License:	LGPL
 Vendor:		Peter Hofmann <software@pxh.de>
 Group:		Libraries
 Source0:	http://www.pxh.de/fs/gsmlib/download/%{name}-%{version}.tar.gz
+# Source0-md5:	deea4ce2e4f5f1965d32d576597d3ff4
 URL:		http://www.pxh.de/fs/gsmlib/
 BuildRequires:	autoconf
 BuildRequires:	automake
