@@ -1,5 +1,5 @@
 Summary:	Library to access GSM mobile phones through GSM modems
-Summary(pl):	Bibliteka dostêpu do telefonów GSM poprzez modem GSM
+Summary(pl):	Biblioteka dostêpu do telefonów GSM poprzez modem GSM
 Name:		gsmlib
 Version:	1.9
 Release:	1
