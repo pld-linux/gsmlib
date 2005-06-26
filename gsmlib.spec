@@ -13,6 +13,8 @@ Patch0:		%{name}-assert.patch
 Patch1:		%{name}-template.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.4d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,6 +45,7 @@ Summary:	Development tools for programs which will use the gsmlib library
 Summary(pl):	Pliki nag³ówkowe do pisania programów wykorzystuj±cych gsmlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	libstdc++-devel
 
 %description devel
 The gsmlib-devel package includes the header files necessary for
