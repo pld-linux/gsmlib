@@ -2,7 +2,7 @@ Summary:	Library to access GSM mobile phones through GSM modems
 Summary(pl):	Biblioteka dostêpu do telefonów GSM poprzez modem GSM
 Name:		gsmlib
 Version:	1.10
-Release:	4
+Release:	5
 License:	LGPL
 Vendor:		Peter Hofmann <software@pxh.de>
 Group:		Libraries
@@ -12,6 +12,7 @@ URL:		http://www.pxh.de/fs/gsmlib/
 Patch0:		%{name}-assert.patch
 Patch1:		%{name}-template.patch
 Patch2:		%{name}-qual.patch
+Patch3:		%{name}-gcc-4.1.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -73,6 +74,7 @@ Statyczna biblioteka gsmlib.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p0
 
 %build
 # supplied libtool is broken (C++ library linking)
