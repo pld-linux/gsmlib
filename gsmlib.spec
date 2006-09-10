@@ -13,6 +13,7 @@ Patch0:		%{name}-assert.patch
 Patch1:		%{name}-template.patch
 Patch2:		%{name}-qual.patch
 Patch3:		%{name}-gcc-4.1.patch
+Patch4:		%{name}-include.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -75,6 +76,7 @@ Statyczna biblioteka gsmlib.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p0
+%patch4 -p0
 
 %build
 # supplied libtool is broken (C++ library linking)
