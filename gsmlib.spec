@@ -4,7 +4,6 @@ Name:		gsmlib
 Version:	1.10
 Release:	6
 License:	LGPL
-Vendor:		Peter Hofmann <software@pxh.de>
 Group:		Libraries
 Source0:	http://www.pxh.de/fs/gsmlib/download/%{name}-%{version}.tar.gz
 # Source0-md5:	deea4ce2e4f5f1965d32d576597d3ff4
@@ -47,7 +46,7 @@ funkcji.
 Summary:	Development tools for programs which will use the gsmlib library
 Summary(pl):	Pliki nag³ówkowe do pisania programów wykorzystuj±cych gsmlib
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
 
 %description devel
@@ -62,7 +61,7 @@ gsmlib.
 Summary:	Static gmslib library
 Summary(pl):	Statyczna biblioteka gsmlib
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static gmslib library.
