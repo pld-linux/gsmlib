@@ -1,5 +1,5 @@
 Summary:	Library to access GSM mobile phones through GSM modems
-Summary(pl):	Biblioteka dostêpu do telefonów GSM poprzez modem GSM
+Summary(pl.UTF-8):   Biblioteka dostÄ™pu do telefonÃ³w GSM poprzez modem GSM
 Name:		gsmlib
 Version:	1.10
 Release:	6
@@ -31,20 +31,20 @@ through GSM modems. Features include:
 Additionally, some simple command line programs are provided to use
 these functionalities.
 
-%description -l pl
-Pakiet zawiera bibliotekê umo¿liwiaj±c± dostêp do mobilnych telefonów
-GSM poprzez modemy GSM. Mo¿liwo¶ci to m.in.:
- - modyfikacja ksi±¿ek adresowych zawartych w telefonie lub na karcie
+%description -l pl.UTF-8
+Pakiet zawiera bibliotekÄ™ umoÅ¼liwiajÄ…cÄ… dostÄ™p do mobilnych telefonÃ³w
+GSM poprzez modemy GSM. MoÅ¼liwoÅ›ci to m.in.:
+ - modyfikacja ksiÄ…Å¼ek adresowych zawartych w telefonie lub na karcie
    SIM
- - czytanie i pisanie wiadomo¶ci SMS zapisanych w telefonie
- - wysy³anie i odbieranie wiadomo¶ci SMS
+ - czytanie i pisanie wiadomoÅ›ci SMS zapisanych w telefonie
+ - wysyÅ‚anie i odbieranie wiadomoÅ›ci SMS
 
-Dodatkowo dostêpnych jest kilka prostych poleceñ do korzystania z tych
+Dodatkowo dostÄ™pnych jest kilka prostych poleceÅ„ do korzystania z tych
 funkcji.
 
 %package devel
 Summary:	Development tools for programs which will use the gsmlib library
-Summary(pl):	Pliki nag³ówkowe do pisania programów wykorzystuj±cych gsmlib
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe do pisania programÃ³w wykorzystujÄ…cych gsmlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -53,20 +53,20 @@ Requires:	libstdc++-devel
 The gsmlib-devel package includes the header files necessary for
 developing programs which use the gsmlib library.
 
-%description devel -l pl
-Pliki nag³ówkowe wymagane do rozwoju programów wykorzystuj±cych
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe wymagane do rozwoju programÃ³w wykorzystujÄ…cych
 gsmlib.
 
 %package static
 Summary:	Static gmslib library
-Summary(pl):	Statyczna biblioteka gsmlib
+Summary(pl.UTF-8):   Statyczna biblioteka gsmlib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static gmslib library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka gsmlib.
 
 %prep
