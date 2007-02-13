@@ -1,5 +1,5 @@
 Summary:	Library to access GSM mobile phones through GSM modems
-Summary(pl.UTF-8):   Biblioteka dostępu do telefonów GSM poprzez modem GSM
+Summary(pl.UTF-8):	Biblioteka dostępu do telefonów GSM poprzez modem GSM
 Name:		gsmlib
 Version:	1.10
 Release:	6
@@ -44,7 +44,7 @@ funkcji.
 
 %package devel
 Summary:	Development tools for programs which will use the gsmlib library
-Summary(pl.UTF-8):   Pliki nagłówkowe do pisania programów wykorzystujących gsmlib
+Summary(pl.UTF-8):	Pliki nagłówkowe do pisania programów wykorzystujących gsmlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -59,7 +59,7 @@ gsmlib.
 
 %package static
 Summary:	Static gmslib library
-Summary(pl.UTF-8):   Statyczna biblioteka gsmlib
+Summary(pl.UTF-8):	Statyczna biblioteka gsmlib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
