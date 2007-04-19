@@ -2,7 +2,7 @@ Summary:	Library to access GSM mobile phones through GSM modems
 Summary(pl.UTF-8):	Biblioteka dostępu do telefonów GSM poprzez modem GSM
 Name:		gsmlib
 Version:	1.10
-Release:	6
+Release:	7
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.pxh.de/fs/gsmlib/download/%{name}-%{version}.tar.gz
