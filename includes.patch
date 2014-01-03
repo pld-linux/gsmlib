@@ -1,0 +1,60 @@
+--- gsmlib-1.10/gsmlib/gsm_util.cc.orig	2014-01-03 16:20:48.896351473 +0100
++++ gsmlib-1.10/gsmlib/gsm_util.cc	2014-01-03 16:21:26.392811705 +0100
+@@ -36,6 +36,7 @@
+ #define _GNU_SOURCE
+ #endif
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/stat.h>
+ 
+ using namespace std;
+--- gsmlib-1.10/gsmlib/gsm_unix_serial.cc.orig	2014-01-03 16:26:02.504641088 +0100
++++ gsmlib-1.10/gsmlib/gsm_unix_serial.cc	2014-01-03 16:26:23.391202394 +0100
+@@ -23,6 +23,7 @@
+ #include <cassert>
+ #include <errno.h>
+ #include <stdio.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <sys/ioctl.h>
+ #include <signal.h>
+--- gsmlib-1.10/gsmlib/gsm_me_ta.cc.orig	2014-01-03 16:27:40.217448656 +0100
++++ gsmlib-1.10/gsmlib/gsm_me_ta.cc	2014-01-03 16:28:01.780664708 +0100
+@@ -19,6 +19,7 @@
+ #include <gsmlib/gsm_parser.h>
+ #include <gsmlib/gsm_sysdep.h>
+ #include <cassert>
++#include <cstdlib>
+ 
+ using namespace std;
+ using namespace gsmlib;
+--- gsmlib-1.10/gsmlib/gsm_sms_codec.cc.orig	2014-01-03 16:29:42.166789369 +0100
++++ gsmlib-1.10/gsmlib/gsm_sms_codec.cc	2014-01-03 16:33:46.825469886 +0100
+@@ -17,6 +17,7 @@
+ #include <gsmlib/gsm_sysdep.h>
+ #include <gsmlib/gsm_sms_codec.h>
+ #include <gsmlib/gsm_util.h>
++#include <limits.h>
+ #include <time.h>
+ #include <strstream>
+ #include <iomanip>
+--- gsmlib-1.10/gsmlib/gsm_sorted_phonebook.cc.orig	2014-01-03 16:29:42.170122684 +0100
++++ gsmlib-1.10/gsmlib/gsm_sorted_phonebook.cc	2014-01-03 16:36:10.091371655 +0100
+@@ -21,6 +21,7 @@
+ #include <fstream>
+ #include <limits.h>
+ #include <cassert>
++#include <cstring>
+ 
+ const int MAX_LINE_SIZE = 1000;
+ 
+--- gsmlib-1.10/apps/gsmsmsd.cc.orig	2014-01-03 16:42:44.952555211 +0100
++++ gsmlib-1.10/apps/gsmsmsd.cc	2014-01-03 16:43:08.582422495 +0100
+@@ -35,6 +35,7 @@
+ #include <errno.h>
+ #include <stdlib.h>
+ #include <signal.h>
++#include <string.h>
+ #include <fstream>
+ #include <iostream>
+ #include <gsmlib/gsm_me_ta.h>
