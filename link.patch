@@ -1,0 +1,11 @@
+--- gsmlib-1.10/ext/Makefile.am.orig	2014-01-03 16:51:44.916298938 +0100
++++ gsmlib-1.10/ext/Makefile.am	2014-01-03 16:53:14.029146929 +0100
+@@ -22,6 +22,8 @@
+ 
+ libgsmext_la_LDFLAGS =	-version-info $(GSM_VERSION)
+ 
++libgsmext_la_LIBADD = ../gsmlib/libgsmme.la
++
+ gsmincludedir =		$(includedir)/gsmlib
+ 
+ gsminclude_HEADERS =	gsm_sie_me.h
