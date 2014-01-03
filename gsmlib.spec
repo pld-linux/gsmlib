@@ -94,9 +94,10 @@ Statyczna biblioteka gsmlib.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm $RPM_BUILD_ROOT%{_libdir}/lib*.la
 
 %find_lang %{name}
 
@@ -110,14 +111,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/FAQ NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %ghost %{_libdir}/lib*.so.?
+%attr(755,root,root) %ghost %{_libdir}/lib*.so.1
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %{_mandir}/man*/*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-#%{_libdir}/lib*.la
 %{_includedir}/%{name}
 
 %files static
