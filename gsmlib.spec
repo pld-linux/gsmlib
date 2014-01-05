@@ -3,11 +3,10 @@ Summary(pl.UTF-8):	Biblioteka dostępu do telefonów GSM poprzez modem GSM
 Name:		gsmlib
 Version:	1.10
 Release:	8
-License:	LGPL
+License:	LGPL v2+
 Group:		Libraries
 Source0:	http://www.pxh.de/fs/gsmlib/download/%{name}-%{version}.tar.gz
 # Source0-md5:	deea4ce2e4f5f1965d32d576597d3ff4
-URL:		http://www.pxh.de/fs/gsmlib/
 Patch0:		%{name}-assert.patch
 Patch1:		%{name}-template.patch
 Patch2:		%{name}-qual.patch
@@ -15,6 +14,7 @@ Patch3:		%{name}-gcc-4.1.patch
 Patch4:		%{name}-include.patch
 Patch5:		includes.patch
 Patch6:		link.patch
+URL:		http://www.pxh.de/fs/gsmlib/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -97,8 +97,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm $RPM_BUILD_ROOT%{_libdir}/lib*.la
-
 %find_lang %{name}
 
 %clean
@@ -109,17 +107,34 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc doc/FAQ NEWS README TODO
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %ghost %{_libdir}/lib*.so.1
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
-%{_mandir}/man*/*
+%doc ChangeLog NEWS README TODO doc/FAQ
+%attr(755,root,root) %{_bindir}/gsmctl
+%attr(755,root,root) %{_bindir}/gsmpb
+%attr(755,root,root) %{_bindir}/gsmsendsms
+%attr(755,root,root) %{_bindir}/gsmsiectl
+%attr(755,root,root) %{_bindir}/gsmsiexfer
+%attr(755,root,root) %{_bindir}/gsmsmsd
+%attr(755,root,root) %{_bindir}/gsmsmsstore
+%attr(755,root,root) %{_libdir}/libgsmext.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgsmext.so.1
+%attr(755,root,root) %{_libdir}/libgsmme.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgsmme.so.1
+%{_mandir}/man1/gsmctl.1*
+%{_mandir}/man1/gsmpb.1*
+%{_mandir}/man1/gsmsendsms.1*
+%{_mandir}/man1/gsmsmsstore.1*
+%{_mandir}/man7/gsminfo.7*
+%{_mandir}/man8/gsmsmsd.8*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/libgsmext.so
+%attr(755,root,root) %{_libdir}/libgsmme.so
+%{_libdir}/libgsmext.la
+%{_libdir}/libgsmme.la
 %{_includedir}/%{name}
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libgsmext.a
+%{_libdir}/libgsmme.a
